@@ -12,29 +12,32 @@ print("2 --->  PAPEL ")
 print("3 --->  TIJERA ")
 
 opcion = int(input("QUE DESEA ESCOJER : "))
-a = 1
+
+maquina = random.randint(a,b,c)
 b = 2
 c = 3
-d = random.randint(a,b,c)
-if a and d==a:
+a = 1
+if a and maquina==a:
     rta =" EMPATE "
-elif a  d==c:
+elif a == maquina==c:
     rta ="GANADOR: PIEDRA "
-elif a and d== b:
+elif a and maquina== b:
     rta ="GANADOR: PAPEL "
-elif b and d== a:
+elif b and maquina== a:
     rta =" GANADOR: PAPEL "
-elif b and d==b:
+elif b and maquina==b:
     rta =" EMPATE "
-elif b and d==c:
+elif b and maquina==c:
     rta =" GANADOR: TIJERA "
-elif c and d==a:
+elif c and maquina==a:
     rta =" GANADOR: PIEDRA "
-elif c and d== b:
+elif c and maquina== b:
     rta = "GANADOR: TIJERA "
-elif c and d== c:
+elif c and maquina== c:
     rta =" EMPATE "
 else: 
     rta =" NO COLOCASTE BIEN AL OPCION DEL MENÚ "
 
-print(rta)
+print("-----------------------")
+print("-------GANADOR---------")
+print("--------, " , rta)
