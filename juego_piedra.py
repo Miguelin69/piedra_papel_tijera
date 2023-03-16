@@ -1,43 +1,39 @@
 import random
 
+aleatorio = random.randrange(0, 3)
+eligePc = ""
+print("1 -------> Piedra ")
+print("2 -------> Papel ")
+print("3 -------> Tijera ")
+opcion = int(input("Que eliges: "))
 
-print("-----------------------------------")
-print("-----PIEDRA , PAPEL , TIJERA-------")
-print("-----------------------------------")
+if opcion == 1:
+    de = "piedra"
+elif opcion == 2:
+    de = "papel"
+elif opcion == 3:
+    de = "tijera"
+print("Tu eliges: ", de)
 
-
-print("MENÚ")
-print("1 --->  PIEDRA ")
-print("2 --->  PAPEL ")
-print("3 --->  TIJERA ")
-
-opcion = int(input("QUE DESEA ESCOJER : "))
-
-maquina = random.randint(a,b,c)
-b = 2
-c = 3
-a = 1
-if a and maquina==a:
-    rta =" EMPATE "
-elif a == maquina==c:
-    rta ="GANADOR: PIEDRA "
-elif a and maquina== b:
-    rta ="GANADOR: PAPEL "
-elif b and maquina== a:
-    rta =" GANADOR: PAPEL "
-elif b and maquina==b:
-    rta =" EMPATE "
-elif b and maquina==c:
-    rta =" GANADOR: TIJERA "
-elif c and maquina==a:
-    rta =" GANADOR: PIEDRA "
-elif c and maquina== b:
-    rta = "GANADOR: TIJERA "
-elif c and maquina== c:
-    rta =" EMPATE "
-else: 
-    rta =" NO COLOCASTE BIEN AL OPCION DEL MENÚ "
-
-print("-----------------------")
-print("-------GANADOR---------")
-print("--------, " , rta)
+if aleatorio == 0:
+    eligePc = "piedra"
+elif aleatorio == 1:
+    eligePc = "papel"
+elif aleatorio == 2:
+    eligePc = "tijera"
+print("PC eligió: ", eligePc)
+print("...")
+if eligePc == "piedra" and de == "papel":
+    print("Ganaste, papel envuelve piedra")
+elif eligePc == "papel" and de == "tijera":
+    print("Ganaste, Tijera corta papel")
+elif eligePc == "tijera" and de == "piedra":
+    print("Ganaste, Piedra pisa tijera")
+if eligePc == "papel" and de == "piedra":
+    print("perdiste, papel envuelve piedra")
+elif eligePc == "tijera" and de == "papel":
+    print("perdiste, Tijera corta papel")
+elif eligePc == "piedra" and de == "tijera":
+    print("perdiste, Piedra pisa tijera")
+elif eligePc == de:
+    print("empate")
